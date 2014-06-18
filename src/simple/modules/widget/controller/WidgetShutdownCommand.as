@@ -3,7 +3,7 @@ package simple.modules.widget.controller
 //	import org.robotlegs.base.ContextEvent;
 //	import org.robotlegs.mvcs.Command;
 	import robotlegs.bender.bundles.mvcs.Command;
-	import simple.common.utils.ContextEvent;
+	//import simple.common.utils.ContextEvent;
 	
 	public class WidgetShutdownCommand extends Command
 	{

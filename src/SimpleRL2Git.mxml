@@ -15,4 +15,5 @@
 	<content:ButtonContainer x="30" y="50"/>
 	<content:TextContainer x="30" y="90"/>
 	<content:ScrollbarContainer x="0" y="0"/>
+	<content:WidgetHolderView x="30" y="90"/>
 </s:WindowedApplication>

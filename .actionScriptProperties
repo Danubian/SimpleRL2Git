@@ -20,6 +20,7 @@
   </applications>
   <modules>
     <module application="src/SimpleRL2Git.mxml" destPath="simple/modules/widget/WidgetModule.swf" optimize="true" sourcePath="src/simple/modules/widget/WidgetModule.mxml"/>
+    <module application="src/SimpleRL2Git.mxml" destPath="simple/modules/generic/GenericModule.swf" optimize="true" sourcePath="src/simple/modules/generic/GenericModule.mxml"/>
   </modules>
   <workers/>
   <buildCSSFiles/>

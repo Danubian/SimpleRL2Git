@@ -17,7 +17,7 @@ package simple.shell.view.mediators
 	
 	public class WidgetHolderMediator extends Mediator
 	{
-		private static const MODULE_URL:String = 'org/robotlegs/demos/acmewidgetfactory/modules/generic/GenericModule.swf';
+		private static const MODULE_URL:String = 'simple/modules/generic/GenericModule.swf';
 		
 		[Inject]
 		public var view:WidgetHolderView;

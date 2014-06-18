@@ -14,7 +14,7 @@ package simple.shell.model
 	public class ActiveWidgetModel extends BaseActor
 	{
 		//Really just a url to "src/AcmeWidgetFactory.mxml"
-		private static const MODULE_URL:String = 'modules/widget/WidgetModule.swf';
+		private static const MODULE_URL:String = 'simple/modules/widget/WidgetModule.swf';
 		
 		protected var widgetMap:NamedObjectMap;
 		protected var infoMap:NamedObjectMap;
