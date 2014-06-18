@@ -69,7 +69,7 @@ package simple.shell
 		
 		public function configure():void
 		{
-			trace("Configuring")	
+			trace("Configuring even more")	
 			//Command Mapping
 			commandMap.map(ShellWidgetEvent.CREATE_WIDGET, ShellWidgetEvent).toCommand(CreateWidgetCommand);
 			commandMap.map(ShellWidgetEvent.POKE_WIDGET, ShellWidgetEvent).toCommand(PokeWidgetCommand);
