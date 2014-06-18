@@ -1,6 +1,6 @@
 package simple.shell
 {
-	import org.swiftsuspenders.Injector;
+	//import org.swiftsuspenders.Injector;
 	
 	import robotlegs.bender.extensions.eventCommandMap.api.IEventCommandMap;
 	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;

@@ -11,14 +11,14 @@ package simple.common.utils
 	import flash.events.Event;
 	import flash.system.ApplicationDomain;
 	
-	import org.swiftsuspenders.Injector;
+	//import org.swiftsuspenders.Injector;
 	import simple.common.utils.CommandMap;
 	import simple.common.utils.ContextEvent;
-	import robotlegs.bender.extensions.mediatorMap.impl.MediatorMap;
+	import simple.common.utils.MediatorMap;
 	import simple.common.interfaces.ICommandMap;
 	import simple.common.interfaces.IInjector;
-	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-	import robotlegs.bender.framework.impl.Context;
+	import simple.common.interfaces.IMediatorMap;
+	import simple.common.utils.Context;
 	import simple.common.utils.ModuleCommandMap;
 	import simple.common.utils.ModuleEventDispatcher;
 	import simple.common.interfaces.IModuleCommandMap;

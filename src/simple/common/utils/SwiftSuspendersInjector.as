@@ -9,8 +9,9 @@ package simple.common.utils
 {
 	import flash.system.ApplicationDomain;
 	
-	import robotlegs.bender.framework.api.IInjector;
 	import org.swiftsuspenders.Injector;
+	
+	import simple.common.interfaces.IInjector;
 	
 	/**
 	 * SwiftSuspender <code>IInjector</code> adpater - See: <a href="http://github.com/tschneidereit/SwiftSuspenders">SwiftSuspenders</a>
@@ -38,6 +39,9 @@ package simple.common.utils
 				</type>
 			</types>;
 		
+		private var parent:SwiftSuspendersInjector = null;
+		private var applicationDomain:ApplicationDomain;
+		
 		public function SwiftSuspendersInjector(xmlConfig:XML = null)
 		{
 			if (xmlConfig)
@@ -56,8 +60,9 @@ package simple.common.utils
 		public function createChild(applicationDomain:ApplicationDomain = null):IInjector
 		{
 			var injector:SwiftSuspendersInjector = new SwiftSuspendersInjector();
-			injector.setApplicationDomain(applicationDomain);
-			injector.setParentInjector(this);
+			injector.applicationDomain(applicationDomain);
+			//injector.setApplicationDomain(applicationDomain);
+			injector.parentInjector(this);
 			return injector;
 		}
 		
@@ -66,7 +71,7 @@ package simple.common.utils
 		 */
 		public function get applicationDomain():ApplicationDomain
 		{
-			return getApplicationDomain();
+			return applicationDomain;
 		}
 		
 		/**
@@ -74,7 +79,12 @@ package simple.common.utils
 		 */
 		public function set applicationDomain(value:ApplicationDomain):void
 		{
-			setApplicationDomain(value);
+			applicationDomain = value;
+		}
+		
+		public function set parentInjector(value:SwiftSuspendersInjector):void
+		{
+			parent = value;
 		}
 		
 	}

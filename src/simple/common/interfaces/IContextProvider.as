@@ -1,6 +1,6 @@
 package simple.common.interfaces
 {
-	import robotlegs.bender.framework.api.IContext;
+	import simple.common.interfaces.IContext;
 
 	public interface IContextProvider
 	{

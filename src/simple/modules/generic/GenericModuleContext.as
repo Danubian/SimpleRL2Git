@@ -5,11 +5,12 @@
  * in accordance with the terms of the license agreement accompanying it.
  */
 
-package org.robotlegs.demos.acmewidgetfactory.modules.generic
+package simple.modules.generic
 {
-	import org.robotlegs.utilities.modular.mvcs.ModuleContext;
+	//import org.robotlegs.utilities.modular.mvcs.ModuleContext;
+	import simple.common.utils.Context;
 	
-	public class GenericModuleContext extends ModuleContext
+	public class GenericModuleContext extends Context
 	{
 		
 		override public function startup():void
