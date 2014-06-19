@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Module xmlns:mx="http://www.adobe.com/2006/mxml"
-		   xmlns:view="org.robotlegs.demos.acmewidgetfactory.modules.widget.view.*"
-		   implements="org.robotlegs.demos.acmewidgetfactory.common.interfaces.IWidgetModule"
+		   xmlns:view="simple.modules.widget.view.*"
+		   implements="simple.common.interfaces.IWidgetModule"
 		   layout="vertical"
 		   width="124"
 		   height="84"
@@ -9,13 +9,13 @@
 
 	<mx:Script>
 		<![CDATA[
-			import robotlegs.bender.framework.api.IContext;
-			import simple.common.utils.ContextEvent;
-			//import simple.common.interfaces.IWidgetModule;
+//			import simple.common.interfaces.IContext;
+//			import simple.common.utils.ContextEvent;
+			import simple.common.interfaces.IWidgetModule;
 			import simple.modules.widget.events.WidgetEvent;
 			
-//			import org.robotlegs.core.IContext;
-//			import org.robotlegs.base.ContextEvent;
+			import org.robotlegs.core.IContext;
+			import org.robotlegs.base.ContextEvent;
 //			import org.robotlegs.demos.acmewidgetfactory.common.interfaces.IWidgetModule;
 //			import org.robotlegs.demos.acmewidgetfactory.modules.widget.controller.WidgetEvent;
 			

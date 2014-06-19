@@ -9,7 +9,7 @@ package simple.modules.generic
 {
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import simple.common.utils.ModuleMediator;
+	import simple.common.utilities.modular.mvcs.ModuleMediator;
 	
 	//import org.robotlegs.utilities.modular.mvcs.ModuleMediator;
 	
@@ -31,6 +31,9 @@ package simple.modules.generic
 		
 		protected function onSomeModuleEvent(e:Event):void
 		{
+			//Some alpha should be in the declaration but it doesn't appear to 
+			//be there
+			
 			view.alpha *= 0.8;
 			(view.alpha > 0.1) || (view.alpha = 0.9);
 		}

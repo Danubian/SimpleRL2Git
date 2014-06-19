@@ -58,6 +58,8 @@ package simple.shell.model
 		
 		protected function createModule(id:String):void
 		{
+			trace("Inside ActiveWidgetModel - createModule")
+			trace("	id : " + id);
 			var widget:IWidgetModule = loadedModuleInfo.factory.create() as IWidgetModule;
 			widgetMap.registerObject(widget, id);
 			eventDispatcher.dispatchEvent(new ActiveWidgetModelEvent(ActiveWidgetModelEvent.WIDGET_CREATED, id));
@@ -77,7 +79,6 @@ package simple.shell.model
 				info.load(ApplicationDomain.currentDomain);
 				infoMap.registerObject(info, id);
 				widgetMap.registerObject(info, id);
-				trace("	info : " + info)
 			}
 			else
 			{
@@ -87,6 +88,7 @@ package simple.shell.model
 		
 		protected function onModuleReady(e:ModuleEvent):void
 		{
+			trace("Inside ActiveWidgetModule - onModuleReady")
 			var widgetId:String = infoMap.getKey(e.module);
 			loadedModuleInfo = e.module;
 			eventDispatcher.dispatchEvent(new ActiveWidgetModelEvent(ActiveWidgetModelEvent.WIDGET_MODULE_READY, widgetId));
@@ -96,12 +98,15 @@ package simple.shell.model
 		
 		protected function onModuleError(e:ModuleEvent):void
 		{
+			trace("Inside ActiveWidgetModule - onModuleError")
 			var widgetId:String = infoMap.getKey(e.module);
+			trace("	widgetId : " + widgetId);
 			eventDispatcher.dispatchEvent(new ActiveWidgetModelEvent(ActiveWidgetModelEvent.WIDGET_MODULE_ERROR, widgetId, e));
 		}
 		
 		protected function onModuleProgress(e:ModuleEvent):void
 		{
+			trace("Inside ActiveWidgetModule - onModuleProgress")
 			var widgetId:String = infoMap.getKey(e.module);
 			eventDispatcher.dispatchEvent(new ActiveWidgetModelEvent(ActiveWidgetModelEvent.WIDGET_MODULE_PROGRESS, widgetId, e));
 		}

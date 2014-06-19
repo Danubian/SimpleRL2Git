@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Module xmlns:fx="http://ns.adobe.com/mxml/2009"
 		   xmlns:s="library://ns.adobe.com/flex/spark"
-		   xmlns:mx="library://ns.adobe.com/flex/halo"
-		   xmlns:generic="org.robotlegs.demos.acmewidgetfactory.modules.generic.*"
-		   implements="org.robotlegs.utilities.modular.core.IModuleContextView"
+		   xmlns:mx="library://ns.adobe.com/flex/mx"
+		   xmlns:generic="simple.modules.generic.*"
+		   implements="simple.common.utilities.modular.core.IModuleContextView"
 		   backgroundColor="#009933"
 		   useHandCursor="true"
 		   buttonMode="true"
@@ -12,23 +12,27 @@
 		   cornerRadius="5"
 		   width="124"
 		   height="84">
-
+	
 	<fx:Script>
 		<![CDATA[
-			import org.robotlegs.utilities.modular.core.IModuleContextView;
-			import org.robotlegs.utilities.modular.core.IModuleEventDispatcher;
+			import simple.common.utilities.modular.core.IModuleContextView;
+			import simple.common.utilities.modular.core.IModuleEventDispatcher;
 			
 			[Inject]
 			public function setModuleDispatcher(dispatcher:IModuleEventDispatcher):void
 			{
 				context.setModuleDispatcher(dispatcher);
 			}
+			
+			public function startup():void{
+				
+			}
 		]]>
 	</fx:Script>
-
+	
 	<fx:Declarations>
 		<generic:GenericModuleContext id="context"
 									  contextView="{this}"/>
 	</fx:Declarations>
-
+	
 </mx:Module>

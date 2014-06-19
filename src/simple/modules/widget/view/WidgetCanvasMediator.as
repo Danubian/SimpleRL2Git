@@ -4,7 +4,7 @@ package simple.modules.widget.view
 	
 	import simple.common.utils.ContextEvent;
 	import simple.modules.widget.events.WidgetEvent;
-	import robotlegs.bender.bundles.mvcs.Mediator;
+	import simple.common.utils.Mediator;
 	
 	//import org.robotlegs.base.ContextEvent;
 	//import org.robotlegs.demos.acmewidgetfactory.modules.widget.controller.WidgetEvent;
